@@ -9,9 +9,11 @@ createGalleryBox.insertAdjacentHTML('beforeend', cards)
   
 function createItem(cards) {
   return cards.map(({preview, original, description})=> {
-    return`<li><a class="gallery__item" href="${original}">
-              <img class="gallery__image" src="${preview}" alt="${description}" />
-          </a></li>`
+    return `<li>
+              <a class="gallery__item" href="${original}">
+                <img class="gallery__image" src="${preview}" alt="${description}" />
+              </a>
+            </li>`
   }).join('') 
 }
 
